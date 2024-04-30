@@ -179,8 +179,8 @@ Home
 }
 
 .title {
+    padding-left: 350px;
     display: flex;
-    text-align: center;
 }
 
 .title h1 {
