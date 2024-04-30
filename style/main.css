@@ -237,7 +237,7 @@ main {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 100px;
 }
 
