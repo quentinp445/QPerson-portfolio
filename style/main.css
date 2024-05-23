@@ -956,5 +956,16 @@ footer .rs_logo .rs img:hover {
     border-radius: 8px;
 }
 
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+.video iframe {
+    border-radius: 15px; 
+    border: none; 
+}
 
 
