@@ -10,7 +10,8 @@
 
 <body>
     <nav>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-list">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="video.html">Vidéos</a></li>
             <li><a href="graphisme.html">Créations</a></li>
@@ -18,6 +19,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
 
     <header>
         <h1>Bienvenue sur mon portfolio</h1>
@@ -46,7 +48,13 @@
                     </video>
                 </div>
             </div>
+            <div class="mobile-buttons">
+                <a href="video.html" class="btn-mobile">Vidéos</a>
+                <a href="graphisme.html" class="btn-mobile">Créations</a>
+            </div>
+            
         </div>
+        
         <div class="p3">
             <div class="skills-wrapper">
                 <!-- Partie gauche : les compétences -->
@@ -147,5 +155,14 @@
 
 
 </body>
-
+<script>
+    function toggleMenu() {
+        const navList = document.getElementById('nav-list');
+        if (navList.style.display === "block") {
+            navList.style.display = "none"; // Hide menu if it's visible
+        } else {
+            navList.style.display = "block"; // Show menu if it's hidden
+        }
+    }
+</script>
 </html>
