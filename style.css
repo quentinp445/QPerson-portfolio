@@ -1,0 +1,558 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: linear-gradient(to bottom, #02000a, #042d4e);
+}
+
+/* Fond vidéo */
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Menu de navigation */
+nav {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff;
+}
+
+
+/* En-tête */
+header {
+    text-align: center;
+    padding: 100px 20px 100px;
+}
+
+.p1 {
+
+    background-color: rgba(0, 0, 0, 1);
+    padding-bottom: 100px;
+    padding-top: 50px  ;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Section présentation */
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.pp {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.description h2 {
+    font-size: 24px;
+}
+
+.description p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Boutons */
+.buttons-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn {
+    position: relative;
+    background: none;
+    border: 2px solid #28b2e8;
+    color: #28b2e8;
+    padding: 12px 24px;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: color 200ms ease-in-out;
+    border-radius: 5px;
+}
+
+.btn:is(:hover, :focus) {
+    color: white;
+}
+
+.btn::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color: #28b2e8;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:is(:hover, :focus)::after {
+    transform: scaleX(1);
+}
+
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0088cc;
+}
+
+/* Flèche animée sous le header */
+.scroll-down {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: #ffffff;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+/* Animation rebond */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+.p2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  rgba(0, 0, 0, 1);
+    margin: 50px 0;
+    padding-bottom: 200px;
+    margin: 50px;
+}
+
+/* Texte à gauche */
+.text-left {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-left h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text-left p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.text-left .btn {
+    background-color: #28b2e8;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-left .btn:hover {
+    background-color: #1a90c7;
+}
+
+/* Conteneur du slider */
+.slider-container {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+/* Conteneur des images du slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none; /* Masquer toutes les images par défaut */
+}
+
+/* Indicateur des points */
+.indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+
+.p3 {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-left: 350px;
+    padding-top: 30px;
+    padding-right: 350px;
+    padding-bottom: 30px;
+
+}
+
+/* Organisation en 2 colonnes */
+.skills-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Partie gauche : Barres de compétences */
+.skills-container {
+    flex: 2;
+}
+
+.skills-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Animation du titre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    flex: 1;
+    font-weight: bold;
+}
+
+.skill-bar-container {
+    flex: 3;
+    height: 15px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #1a90c7, #30d5c8);
+    transition: width 1s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+/* Effet LED au survol */
+.skill-bar:hover {
+    box-shadow: 0px 0px 10px rgba(26, 144, 199, 0.8), 
+                0px 0px 20px rgba(48, 213, 200, 0.6),
+                0px 0px 30px rgba(48, 213, 200, 0.4);
+}
+
+.percent {
+    flex: 0.5;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Partie droite : Texte explicatif */
+.skills-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    background: rgb(0, 0, 0);
+    padding: 15px;
+    text-align: left;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in 0.5s forwards;
+}
+
+/* Conteneur des cartes */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60vh;
+    padding-left: 400px;
+    padding-right: 400px;
+    background-color:rgba(0, 0, 0, 0.5);;
+}
+
+/* Style des cartes */
+.card {
+    position: relative;
+    width: 32%;
+    height: 80%;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Image des cartes */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Overlay (nom de la carte) */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Titre des cartes */
+.card-overlay h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out 0.2s;
+}
+
+/* Effets de survol avec couleurs différentes */
+.card:hover img {
+    opacity: 0;
+}
+
+.card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover .card-overlay h2 {
+    opacity: 1;
+}
+
+/* Couleur spécifique pour chaque carte */
+.card-videos:hover {
+    box-shadow: 0px 0px 20px rgba(138, 43, 226, 0.8);
+}
+
+.card-videos:hover .card-overlay {
+    background: rgba(138, 43, 226, 0.8);
+}
+
+.card-projets:hover {
+    box-shadow: 0px 0px 20px rgba(255, 69, 0, 0.8);
+}
+
+.card-projets:hover .card-overlay {
+    background: rgba(255, 69, 0, 0.8);
+}
+
+.card-illustrations:hover {
+    box-shadow: 0px 0px 20px rgba(30, 144, 255, 0.8);
+}
+
+.card-illustrations:hover .card-overlay {
+    background: rgba(30, 144, 255, 0.8);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+.container1 {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.video-container {
+    overflow: hidden;
+    border-radius: 10px; /* Arrondi des bords */
+
+}
+
+video {
+    display: block;
+    width: 800px;
+    height: auto;
+    border-radius: 20px;
+}
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #1a90c7, #136a91);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #1b98d2, #15759e);
+}
+
+.btn-download:active {
+    transform: scale(0.97);
+}
