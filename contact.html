@@ -9,14 +9,16 @@
 </head>
 <body>
     <nav>
-        <ul>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-list">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="video.html">Vidéos</a></li>
             <li><a href="graphisme.html">Créations</a></li>
             <li><a href="projets.html">Projets</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>  
+    </nav>
+    
     <main class="contact-container">
         <h1>Mes Contacts</h1>
         <ul class="contact-list">
@@ -35,4 +37,14 @@
         </ul>
     </footer>
 </body>
+<script>
+    function toggleMenu() {
+        const navList = document.getElementById('nav-list');
+        if (navList.style.display === "block") {
+            navList.style.display = "none"; // Hide menu if it's visible
+        } else {
+            navList.style.display = "block"; // Show menu if it's hidden
+        }
+    }
+</script>
 </html>
