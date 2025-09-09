@@ -526,3 +526,58 @@ html[data-theme="light"] .lightbox__close{ background:rgba(0,0,0,.15); color:#11
   .glass, .glass-lite, .card, .gallery-item, .carousel__item, .video-thumb{border:1px solid CanvasText}
   .btn--primary{background:ButtonFace; color:ButtonText}
 }
+
+
+/* =========================================
+   13) MOBILE UX UPGRADES (fine-tuning)
+   Tweaks after real-device tests (Galaxy/Chrome)
+============================================*/
+
+/* A) Compact topbar and scannable nav on small screens */
+@media (max-width: 768px){
+  :root{ --header-h: 64px }
+  .topbar{ padding: max(.15rem, var(--safe-top)) 1rem .15rem 1rem }
+  .brand{ font-size: clamp(1.6rem, 5vw, 2rem) }
+  .menu{ gap:.35rem; overflow:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity; }
+  .menu a{ scroll-snap-align:center; padding:.55rem .7rem }
+}
+
+/* B) Prevent chip text from wrapping weirdly on mobile */
+.pill{ white-space:nowrap }
+
+/* C) Improve hero chips layout on very small phones */
+@media (max-width: 420px){
+  .hero-row{ width:100%; align-items:center; }
+  .disciplines{ display:flex; flex-wrap:wrap; gap:.5rem; width:100%; justify-content:center }
+  .pill{ flex: 0 1 auto }
+}
+
+/* D) Work blocks: tighter header, better wrapping controls */
+.work-head{ flex-wrap:wrap }
+@media (max-width: 480px){
+  .work-head{ gap:.5rem }
+  .work-tag{ order:3 }
+  .work-toggle{ padding:.35rem .55rem; font-size:0; } /* hide text, keep icon-only */
+  .work-toggle .ico{ width:20px; height:20px }
+}
+
+/* E) Card paddings a tad smaller on narrow screens for more content per fold */
+@media (max-width: 480px){
+  .works .work-block{ padding: 1rem }
+  .card{ padding:1rem }
+}
+
+/* F) Carousel: avoid end-gutter clipping on mobile */
+@media (max-width: 540px){
+  .carousel{ margin-inline: -.25rem } /* bleed a bit to use full width */
+  .carousel__track{ padding-inline:.25rem }
+}
+
+/* G) Skills/Languages: reduce visual density */
+@media (max-width: 420px){
+  .ring{ --size:52px }
+  .meter{ height:9px }
+}
+
+/* H) Safer bottom spacing so CTA not hidden behind Android nav bar */
+.section:last-of-type, .footer{ padding-bottom: calc(2rem + var(--safe-bottom)) }
