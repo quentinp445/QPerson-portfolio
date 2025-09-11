@@ -19,8 +19,6 @@
 <body id="top">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <!-- TOPBAR (fixe) -->
-   
   <header class="topbar" role="banner" id="site-header">
     <a class="brand" href="#top" aria-label="Accueil — Quentin Person">QP</a>
 
@@ -29,13 +27,11 @@
       <a href="#projets" data-nav>Projets</a>
       <a href="#realisations" data-nav>Réalisations</a>
       <a href="#contact" class="btn-nav" data-nav>Contact</a>
-      <!-- Sélecteur de langue -->
       <div class="lang-switch" role="group" aria-label="Changer de langue">
         <button class="btn-lang is-active" data-lang="fr" aria-pressed="true" title="Français">FR</button>
         <button class="btn-lang" data-lang="en" aria-pressed="false" title="English">EN</button>
-        </div>
+      </div>
 
-      <!-- Switch Nuit/Jour -->
       <button id="themeSwitch" class="switch" role="switch" aria-checked="true"
               aria-label="Basculer mode sombre/clair" title="Mode sombre / clair">
         <span class="switch__track" aria-hidden="true">
@@ -47,7 +43,6 @@
     </nav>
   </header>
 
-  <!-- HERO -->
   <main id="main" class="hero hero--split" tabindex="-1" aria-label="En-tête du site">
     <div class="hero__left">
       <h1 class="display" aria-label="PORTFOLIO">
@@ -84,13 +79,11 @@
       </model-viewer>
     </div>
 
-    <!-- Dégradé de fond subtil pour le Hero -->
     <div class="hero-gradient" aria-hidden="true"></div>
   </main>
 
   <div class="divider" aria-hidden="true"></div>
 
-  <!-- PRÉSENTATION -->
   <section id="about" class="section about" aria-labelledby="aboutTitle">
     <h2 id="aboutTitle" class="section__title">Présentation</h2>
 
@@ -106,7 +99,6 @@
         </div>
       </div>
 
-      <!-- ÉTAGE 1 -->
       <div class="about-row1">
         <figure class="about-photo glass-lite reveal">
           <img src="portrait.jpg" alt="Photo de Quentin Person" loading="lazy">
@@ -161,31 +153,17 @@
               <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M5 12l5 5L20 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
               Compétences
             </h4>
-            <div class="skill-list" role="list">
-              <div class="skill-line" role="listitem">
-                <div class="skill-head"><span class="skill-name">Motion design</span><span class="skill-val">90%</span></div>
-                <div class="meter" aria-label="Motion design" style="--val:.90"></div>
-              </div>
-              <div class="skill-line" role="listitem">
-                <div class="skill-head"><span class="skill-name">3D / Rendu</span><span class="skill-val">85%</span></div>
-                <div class="meter" aria-label="3D / Rendu" style="--val:.85"></div>
-              </div>
-              <div class="skill-line" role="listitem">
-                <div class="skill-head"><span class="skill-name">Graphisme</span><span class="skill-val">88%</span></div>
-                <div class="meter" aria-label="Graphisme" style="--val:.88"></div>
-              </div>
-              <div class="skill-line" role="listitem">
-                <div class="skill-head"><span class="skill-name">Montage vidéo</span><span class="skill-val">80%</span></div>
-                <div class="meter" aria-label="Montage vidéo" style="--val:.80"></div>
-              </div>
-            </div>
+            <ul class="softskills" role="list">
+              <li role="listitem">Motion design</li>
+              <li role="listitem">3D / Rendu</li>
+              <li role="listitem">Graphisme</li>
+              <li role="listitem">Montage vidéo</li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- ÉTAGE 2 : 3 DROPDOWNS AVEC SWITCHS INDIVIDUELS -->
       <div class="about-row2 reveal" role="list">
-        <!-- PARCOURS -->
         <div class="collapse glass-lite" data-collapse role="listitem">
           <div class="collapse__header" role="button" tabindex="0" aria-expanded="false" aria-controls="edu-panel">
             <span class="info-title with-icon">
@@ -222,7 +200,6 @@
           </div>
         </div>
 
-        <!-- EXPÉRIENCE -->
         <div class="collapse glass-lite hint" data-collapse role="listitem">
           <div class="collapse__header" role="button" tabindex="0" aria-expanded="false" aria-controls="exp-panel">
             <span class="info-title with-icon">
@@ -269,7 +246,6 @@
           </div>
         </div>
 
-        <!-- OUTILS (sélection) -->
         <div class="collapse glass-lite" data-collapse role="listitem">
           <div class="collapse__header" role="button" tabindex="0" aria-expanded="false" aria-controls="tools-panel">
             <span class="info-title with-icon">
@@ -289,13 +265,12 @@
             </div>
           </div>
         </div>
-      </div><!-- /about-row2 -->
+      </div>
     </div>
   </section>
 
   <div class="divider divider--big" aria-hidden="true"></div>
 
-  <!-- PROJETS -->
   <section id="projets" class="section" aria-labelledby="projectsTitle">
     <h2 id="projectsTitle" class="section__title">Projets</h2>
     <div class="projects-grid">
@@ -306,12 +281,9 @@
     </div>
   </section>
 
-  
-  <!-- RÉALISATIONS -->
   <section id="realisations" class="section works" aria-labelledby="worksTitle">
     <h2 id="worksTitle" class="section__title">Mes réalisations</h2>
 
-    <!-- MOTION -->
     <div class="work-block motion glass reveal" aria-labelledby="motionTitle">
       <div class="work-head">
         <h3 id="motionTitle">Motion</h3>
@@ -343,7 +315,6 @@
       </div>
     </div>
 
-    <!-- 3D -->
     <div class="work-block threeD glass reveal" aria-labelledby="threeDTitle">
       <div class="work-head">
         <h3 id="threeDTitle">3D</h3>
@@ -394,7 +365,6 @@
       </div>
     </div>
 
-    <!-- ILLUSTRATION -->
     <div class="work-block illus glass reveal" aria-labelledby="illusTitle">
       <div class="work-head">
         <h3 id="illusTitle">Illustration &amp; Graphisme</h3>
@@ -469,7 +439,6 @@
   </section>
 
   <div class="divider" aria-hidden="true"></div>
-<!-- CONTACT -->
   <section id="contact" class="section contact" aria-labelledby="contactTitle">
     <h2 id="contactTitle" class="section__title">Contact</h2>
     <a class="btn btn--primary" href="mailto:personquentin700@gmail.com">Me contacter</a>
