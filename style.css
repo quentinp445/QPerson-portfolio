@@ -1,20 +1,4 @@
-/* =========================================
-   Quentin Person — Portfolio
-   Responsive, Mobile-First CSS (2025)
-   Drop-in replacement for style.css
-   -----------------------------------------
-   Highlights:
-   • Mobile-first, progressively enhanced
-   • Fluid typography & spacing via clamp()
-   • Safe-area support (iOS notch)
-   • Reduced motion & high-contrast friendly
-   • Touch-friendly targets & inertial scrolling
-   • Light/Dark themes + system fallback
-==========================================*/
 
-/* ================================
-   0) VARIABLES & THEMES
-===================================*/
 :root{
   /* Layout */
   --radius:.9rem;
@@ -30,8 +14,8 @@
   --border: rgba(255,255,255,.14);
 
   /* Accents */
-  --accent:#ff7a1a;
-  --accent-2:#ff9b4a;
+  --accent:#1e1aff;
+  --accent-2:#4a5cff;
 
   /* Hero */
   --hero-img: url("2.png");
@@ -126,7 +110,7 @@ section{scroll-margin-top:calc(var(--header-h) + 12px)}
 body::before{
   content:""; position:fixed; inset:-10%; pointer-events:none; z-index:-1;
   background:
-    radial-gradient(1200px 700px at 10% 20%, rgba(255,122,26,.075), transparent 60%),
+    radial-gradient(1200px 700px at 10% 20%, rgba(30, 26, 255, 0.075), transparent 60%),
     radial-gradient(1000px 600px at 90% 80%, rgba(255,255,255,.04), transparent 55%);
 }
 
@@ -167,7 +151,7 @@ html[data-theme="light"] .topbar{background:rgba(246,248,251,.72); border-bottom
 }
 .menu a:hover{background:rgba(255,255,255,.10)}
 html[data-theme="light"] .menu a:hover{background:rgba(0,0,0,.06)}
-.menu a.active{box-shadow:inset 0 0 0 2px rgba(255,122,26,.75); border-radius:.8rem}
+.menu a.active{box-shadow:inset 0 0 0 2px rgba(0, 47, 255, 0.75); border-radius:.8rem}
 
 /* Language switch */
 .lang-switch{display:flex; gap:.35rem; align-items:center; margin-left:.2rem}
@@ -180,10 +164,10 @@ html[data-theme="light"] .menu a:hover{background:rgba(0,0,0,.06)}
 .btn-lang.is-active{
   background: linear-gradient(180deg,var(--accent),var(--accent-2));
   color: #111; border-color: rgba(0,0,0,.25);
-  box-shadow: 0 10px 18px rgba(255,122,26,.35), inset 0 1px 0 rgba(255,255,255,.28);
+  box-shadow: 0 10px 18px rgba(0, 47, 255, 0.75), inset 0 1px 0 rgba(255,255,255,.28);
 }
 html[data-theme="light"] .btn-lang:hover{background:rgba(0,0,0,.06)}
-html[data-theme="light"] .btn-lang.is-active{background:#111; color:#fff; box-shadow:0 10px 18px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.12)}
+html[data-theme="light"] .btn-lang.is-active{background:#111; color:#fff; box-shadow:0 10px 18px rgba(0, 10, 53, 0.75), inset 0 1px 0 rgba(255,255,255,.12)}
 
 /* Theme switch */
 .switch{--size:38px; position:relative; width:74px; height:var(--size); margin-left:.4rem; border:none; background:transparent; cursor:pointer; padding:0}
@@ -223,7 +207,7 @@ html[data-theme="light"] .subtitle{text-shadow:none}
 html[data-theme="light"] .pill{color:#0f1115; border-color:rgba(0,0,0,.2); background:rgba(0,0,0,.04)}
 
 .btn{display:inline-block; padding:.95rem 1.4rem; border-radius:999px; font-weight:900; transition:.2s}
-.btn--primary{background:linear-gradient(180deg,var(--accent),var(--accent-2)); color:#111; border:1px solid rgba(0,0,0,.25); box-shadow:0 10px 22px rgba(255,122,26,.35), inset 0 1px 0 rgba(255,255,255,.28)}
+.btn--primary{background:linear-gradient(180deg,var(--accent),var(--accent-2)); color:#111; border:1px solid rgba(0,0,0,.25); box-shadow:0 10px 22px rgba(6, 17, 170, 0.35), inset 0 1px 0 rgba(255,255,255,.28)}
 .btn--primary:hover{transform:translateY(-2px); filter:saturate(1.08) brightness(1.02)}
 
 .hero__right{display:flex; justify-content:flex-start; align-items:center; z-index:1}
@@ -272,13 +256,13 @@ html[data-theme="light"] .about-topline{border-bottom:1px solid rgba(0,0,0,.08)}
 .about-photo img{width:100%; height:100%; max-height:520px; object-fit:cover; border-radius:.6rem; box-shadow:0 12px 30px rgba(0,0,0,.38)}
 .about-text{display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; text-align:left}
 .hello-title{font-family:'Bebas Neue',sans-serif; font-size:clamp(2.2rem, 7.5vw, 5.1rem); line-height:.9; margin:.15rem 0 .55rem; position:relative}
-.hello-title .bang{color:var(--accent); text-shadow:0 12px 22px rgba(255,122,26,.35)}
+.hello-title .bang{color:var(--accent); text-shadow:0 12px 22px rgba(41, 26, 255, 0.35)}
 .hello-title:after{content:""; position:absolute; left:0; right:28%; bottom:-.35rem; height:.32rem; border-radius:999px; background:linear-gradient(90deg,var(--accent),var(--accent-2)); opacity:.9; filter:blur(.2px)}
 .about-paragraph{opacity:.95; margin:.6rem 0 .9rem; max-width:66ch}
 .about-chips{display:flex; gap:.6rem; flex-wrap:wrap; justify-content:flex-start}
 
 .chip{display:inline-flex; align-items:center; gap:.5rem; padding:.62rem .95rem; border-radius:.6rem; font-weight:900; border:1px solid rgba(0,0,0,.25)}
-.chip--accent{color:#111; background:linear-gradient(180deg,var(--accent),var(--accent-2)); box-shadow:0 10px 20px rgba(255,122,26,.35), inset 0 1px 0 rgba(255,255,255,.28)}
+.chip--accent{color:#111; background:linear-gradient(180deg,var(--accent),var(--accent-2)); box-shadow:0 10px 20px rgba(19, 6, 129, 0.35), inset 0 1px 0 rgba(255,255,255,.28)}
 .chip--ellip{max-width:320px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .nowrap{white-space:nowrap}
 
@@ -305,7 +289,7 @@ html[data-theme="light"] .ring::before{background:var(--panel)}
 .skill-name{font-weight:800}
 .skill-val{color:var(--muted); font-weight:700}
 .meter{--bg: rgba(255,255,255,.08); --fill: linear-gradient(90deg,var(--accent),var(--accent-2)); height:10px; border-radius:999px; background:var(--bg); overflow:hidden; position:relative}
-.meter::before{content:""; position:absolute; inset:0; width:calc(var(--val) * 100%); background:var(--fill); border-radius:999px; box-shadow:0 6px 14px rgba(255,122,26,.25); transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.meter::before{content:""; position:absolute; inset:0; width:calc(var(--val) * 100%); background:var(--fill); border-radius:999px; box-shadow:0 6px 14px rgba(21, 7, 139, 0.25); transition:width .5s cubic-bezier(.2,.8,.2,1)}
 
 /* Row 2 (accordions) */
 .about-row2{margin-top:1.1rem; display:grid; gap:1rem; grid-template-columns:repeat(3, minmax(0,1fr)); align-items:start}
@@ -337,7 +321,7 @@ html[data-theme="light"] .collapse__content{border-top:1px solid rgba(0,0,0,.08)
 /* Timeline */
 .timeline{list-style:none; margin:0; padding:.2rem 0 0 .1rem; display:grid; gap:1rem}
 .timeline li{display:grid; grid-template-columns:16px 1fr; gap:.7rem; align-items:flex-start}
-.timeline .dot{width:12px; height:12px; border-radius:50%; margin-top:.45rem; background:linear-gradient(180deg,var(--accent),var(--accent-2)); box-shadow:0 0 0 2px rgba(255,255,255,.07), 0 4px 10px rgba(255,122,26,.35)}
+.timeline .dot{width:12px; height:12px; border-radius:50%; margin-top:.45rem; background:linear-gradient(180deg,var(--accent),var(--accent-2)); box-shadow:0 0 0 2px rgba(255,255,255,.07), 0 4px 10px rgba(10, 8, 145, 0.35)}
 .timeline .line{position:relative; padding-bottom:.75rem}
 .timeline .line::after{content:""; position:absolute; left:-.95rem; top:1.4rem; bottom:-.1rem; width:2px; background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.04))}
 html[data-theme="light"] .timeline .line::after{background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,.08))}
@@ -360,7 +344,7 @@ html[data-theme="light"] .timeline .line::after{background:linear-gradient(180de
 ===================================*/
 .projects-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.2rem}
 .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02)), var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.2rem; text-align:left; transition:.25s; box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 18px 36px rgba(0,0,0,.28)}
-.card:hover{transform:translateY(-4px); box-shadow:0 12px 26px rgba(0,0,0,.42), 0 0 0 1px rgba(255,122,26,.45) inset}
+.card:hover{transform:translateY(-4px); box-shadow:0 12px 26px rgba(0,0,0,.42), 0 0 0 1px rgba(26, 87, 255, 0.45) inset}
 
 /* Appear on scroll utility */
 .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease}
@@ -428,7 +412,7 @@ html[data-theme="light"] .work-toggle:hover{ background:rgba(0,0,0,.06) }
 .work-block.is-collapsed .work-body{ height:0 !important }
 
 /* Category-specific background vibes */
-.work-block.motion{ border-left: 3px solid var(--accent); background: linear-gradient(180deg, rgba(255,122,26,.10), rgba(255,122,26,0) 60%), linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)) }
+.work-block.motion{ border-left: 3px solid var(--accent); background: linear-gradient(180deg, rgba(26, 87, 255, 0.1), rgba(255,122,26,0) 60%), linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)) }
 .work-block.threeD{ --accent-3d:#4db3ff; border-left: 3px solid var(--accent-3d); background: radial-gradient(600px 200px at 85% -10%, rgba(77,179,255,.08), transparent 70%), linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)); box-shadow: 0 0 0 1px var(--border) inset, var(--shadow) }
 .work-block.illus{ --accent-illus:#b78cff; border-left: 3px solid var(--accent-illus); background: linear-gradient(180deg, rgba(183,140,255,.10), rgba(183,140,255,0) 60%), linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01)) }
 
@@ -581,3 +565,41 @@ html[data-theme="light"] .lightbox__close{ background:rgba(0,0,0,.15); color:#11
 
 /* H) Safer bottom spacing so CTA not hidden behind Android nav bar */
 .section:last-of-type, .footer{ padding-bottom: calc(2rem + var(--safe-bottom)) }
+
+:root{
+  --accent:#1a8cff;     /* Bleu principal */
+  --accent-2:#1a8cff;   /* même bleu pour annuler le dégradé orange */
+  --shadow:none;
+  --hero-shadow:none;
+
+}
+
+
+
+/* 2) Suppression des flous et ombres partout */
+.topbar,
+.glass, .glass-lite,
+.card, .gallery-item, .carousel__item, .video-thumb,
+.lightbox__img, .about-photo img, .app-icon, .folio-img {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  filter: none !important;           /* enlève les drop-shadows */
+}
+
+.display, .subtitle, .brand, .btn--primary {
+  text-shadow: none !important;
+}
+
+
+
+/* Bouton primaire reste bleu (dégradé neutralisé car accent==accent-2) */
+.btn--primary{
+  background: linear-gradient(180deg,var(--accent),var(--accent-2)) !important;
+  box-shadow: none !important;
+}
+
+/* Bordures conservées mais sans ombre */
+.card, .gallery-item, .carousel__item, .video-thumb, .about-photo img{
+  border-color: var(--border);
+}
