@@ -17,6 +17,7 @@
 </head>
 
 <body id="top">
+  
   <a class="skip-link" href="#main">Aller au contenu</a>
 
   <header class="topbar" role="banner" id="site-header">
@@ -100,7 +101,7 @@
       </div>
 
       <div class="about-row1">
-        <figure class="about-photo glass-lite reveal">
+        <figure class="about-photo reveal">
           <img src="portrait.png" alt="Photo de Quentin Person" loading="lazy">
         </figure>
 
@@ -421,9 +422,9 @@
         </figure>
       
         <figure class="gallery-item">
-          <a href="assets/illus/150_draw.png">
-            <img src="assets/illus/150_draw.png" loading="lazy"
-                 alt="hollowknight">
+          <a href="assets/illus/148_draw.png">
+            <img src="assets/illus/148_draw.png" loading="lazy"
+                 alt="Personnage féminin — maillot vert, style anime">
           </a>
         </figure>
       
@@ -453,7 +454,47 @@
     <button class="lightbox__close" aria-label="Fermer (Échap)">×</button>
     <img class="lightbox__img" alt="">
   </div>
+  <div id="pc-disclaimer">
+    ⚠️ Pour une meilleure expérience, il est recommandé de consulter ce site sur un ordinateur.
+    <button id="close-disclaimer">✖</button>
+  </div>
+  
+  <style>
+  #pc-disclaimer {
+    background: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: none; /* caché par défaut */
+  }
+  
+  #pc-disclaimer button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  </style>
+  
+  <script>
+    // Affiche le message seulement si l'écran est petit (ex : smartphone)
+    if (window.innerWidth < 1024) {
+      document.getElementById("pc-disclaimer").style.display = "block";
+    }
+  
+    // Bouton pour fermer le message
+    document.getElementById("close-disclaimer").onclick = function () {
+      document.getElementById("pc-disclaimer").style.display = "none";
+    };
+  </script>
+  
 </body>
 </html>
-
-
