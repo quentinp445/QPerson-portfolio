@@ -731,3 +731,117 @@ html[data-theme="light"] .tooltip:hover::after{ background:#111; color:#fff }
     text-align:center;
   }
 }
+/* ===== ABOUT CTA CLEANUP ===== */
+.about-chips{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+  margin-top:18px;
+}
+
+.about-chips .chip{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:50px;
+  padding:0 18px;
+  border-radius:14px;
+  font-weight:800;
+  line-height:1;
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    border-color .18s ease,
+    background-color .18s ease,
+    color .18s ease;
+}
+
+.about-chips .chip:hover{
+  transform:translateY(-2px);
+}
+
+.about-chips .chip .ico{
+  width:18px;
+  height:18px;
+  flex:0 0 18px;
+}
+
+.about-chips .chip--accent{
+  background:linear-gradient(180deg, var(--accent), color-mix(in srgb, var(--accent) 82%, #ff7a7a));
+  color:#111;
+  border:1px solid rgba(0,0,0,.14);
+  box-shadow:0 8px 18px rgba(255, 59, 47, .16);
+}
+
+.about-chips .chip--accent:hover{
+  box-shadow:0 12px 24px rgba(255, 59, 47, .22);
+}
+
+.about-chips .chip--ghost{
+  background:transparent;
+  color:var(--fg);
+  border:1px solid var(--border);
+}
+
+.about-chips .chip--ghost:hover{
+  border-color:var(--accent);
+  background:color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.about-chips .chip--cv{
+  font-weight:900;
+}
+
+.about-chips .chip--cv .ico{
+  transform:translateY(-1px);
+}
+
+.about-note{
+  margin-top:10px;
+  font-size:.96rem;
+  color:var(--muted);
+}
+
+.availability-badge{
+  display:inline-flex;
+  align-items:center;
+  min-height:50px;
+  padding:0 18px;
+  border-radius:999px;
+  border:1px solid color-mix(in srgb, var(--accent) 55%, var(--border));
+  background:color-mix(in srgb, var(--accent) 7%, transparent);
+  color:var(--fg);
+  font-weight:700;
+  white-space:nowrap;
+}
+
+@media (max-width: 900px){
+  .about-chips{
+    gap:10px;
+  }
+
+  .about-chips .chip,
+  .availability-badge{
+    min-height:48px;
+    padding:0 16px;
+  }
+}
+
+@media (max-width: 640px){
+  .about-chips{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .about-chips .chip,
+  .availability-badge{
+    width:100%;
+    justify-content:center;
+  }
+
+  .about-note{
+    text-align:center;
+  }
+}
