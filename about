@@ -138,8 +138,17 @@
     <span>Télécharger mon CV</span>
   </a>
 
-  <span class="availability-badge">Disponible pour échanger</span>
+  <a class="availability-badge" href="#contact">Disponible pour échanger</a>
 </div>
+
+<p class="about-note">Version PDF — téléchargement direct en un clic.</p>
+
+<ul class="softskills">
+  <li>Rigueur</li>
+  <li>Curiosité</li>
+  <li>Esprit d’équipe</li>
+  <li>Autonomie</li>
+</ul>
 
 <p class="about-note">Version PDF — téléchargement direct en un clic.</p>
 
