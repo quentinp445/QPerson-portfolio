@@ -288,12 +288,12 @@
 
   <div class="divider divider--big" aria-hidden="true"></div>
 
-  <section id="projets" class="section" aria-labelledby="projectsTitle">
+<section id="projets" class="section" aria-labelledby="projectsTitle">
   <h2 id="projectsTitle" class="section__title">Projets</h2>
 
   <div class="projects-grid">
     <!-- Projet 01 -->
-    <a href="Innovation1.pdf" target="_blank" class="project-link">
+    <a href="Innovationl.pdf" target="_blank" class="project-link">
       <article class="card project-card">
         <img src="INNOVATION.jpg" alt="Aperçu du projet Innovation Lab" class="project-image">
         <div class="project-content">
@@ -315,17 +315,66 @@
     </a>
 
     <!-- Projet 03 -->
-    <a href="Redbull.mp4" target="_blank" class="project-link">
-      <article class="card project-card">
-        <img src="REDBULL.jpg" alt="Aperçu du court métrage Redbull" class="project-image">
-        <div class="project-content">
-          <h3>Projet 03</h3>
-          <p>Court métrage Redbull &amp; shading.</p>
-        </div>
-      </article>
-    </a>
+    <article class="card project-card video-card" onclick="openVideoModal()">
+      <img src="REDBULL.jpg" alt="Aperçu du court métrage Redbull" class="project-image">
+      <div class="project-content">
+        <h3>Projet 03</h3>
+        <p>Court métrage Redbull &amp; shading.</p>
+      </div>
+    </article>
   </div>
 </section>
+
+<!-- Modal vidéo -->
+<div id="videoModal" class="video-modal" aria-hidden="true">
+  <div class="video-modal__overlay" onclick="closeVideoModal()"></div>
+  <div class="video-modal__content">
+    <button class="video-modal__close" onclick="closeVideoModal()" aria-label="Fermer la vidéo">
+      &times;
+    </button>
+
+    <div class="video-wrapper">
+      <iframe
+        id="youtubeVideo"
+        width="560"
+        height="315"
+        src=""
+        data-src="https://www.youtube.com/embed/41y0VRqXE6c?si=MGGI-ApU6DCKmUUH"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("youtubeVideo");
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    iframe.src = iframe.dataset.src + "&autoplay=1";
+  }
+
+  function closeVideoModal() {
+    const modal = document.getElementById("videoModal");
+    const iframe = document.getElementById("youtubeVideo");
+
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    iframe.src = "";
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      closeVideoModal();
+    }
+  });
+</script>
 
   <section id="realisations" class="section works" aria-labelledby="worksTitle">
     <h2 id="worksTitle" class="section__title">Mes réalisations</h2>
