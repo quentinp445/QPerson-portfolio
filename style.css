@@ -900,71 +900,82 @@ html[data-theme="light"] .tooltip:hover::after{ background:#111; color:#fff }
 }
 
 .posters-row{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  gap:clamp(1rem, 3vw, 3rem);
-  flex-wrap:wrap;
-  perspective:1200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(1rem, 2.8vw, 2.6rem);
+  flex-wrap: wrap;
+  perspective: 1200px;
 }
 
 .poster-float{
-  margin:0;
-  background:transparent;
-  border:none;
-  box-shadow:none !important;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none !important;
   animation: posterFloat 5.5s ease-in-out infinite;
 }
 
 .poster-float--offset{
-  animation-delay:1.2s;
+  animation-delay: .9s;
+}
+
+.poster-float--offset-2{
+  animation-delay: 1.8s;
 }
 
 .poster-float img{
-  display:block;
-  width:min(100%, 320px);
-  height:auto;
-  object-fit:contain;
-  background:transparent;
-  border:none;
-  box-shadow:none !important;
-  filter:drop-shadow(0 16px 30px rgba(0,0,0,.28));
-  transition:transform .25s ease, filter .25s ease;
+  display: block;
+  width: min(100%, 280px);
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  box-shadow: none !important;
+  filter: drop-shadow(0 16px 30px rgba(0,0,0,.28));
+  transition: transform .25s ease, filter .25s ease;
 }
 
-.poster-float:first-child img{
-  transform:rotate(-3deg);
+.poster-float:nth-child(1) img{
+  transform: rotate(-4deg) translateY(10px);
 }
 
-.poster-float--offset img{
-  transform:rotate(3deg) translateY(24px);
+.poster-float:nth-child(2) img{
+  transform: rotate(1deg) translateY(28px);
+}
+
+.poster-float:nth-child(3) img{
+  transform: rotate(4deg) translateY(4px);
 }
 
 .poster-float:hover img{
-  transform:translateY(-6px) scale(1.02);
-  filter:drop-shadow(0 22px 34px rgba(0,0,0,.34));
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 22px 34px rgba(0,0,0,.34));
 }
 
 @keyframes posterFloat{
-  0%,100%{ transform:translateY(0px); }
-  50%{ transform:translateY(-10px); }
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-10px); }
+}
+
+@media (max-width: 900px){
+  .poster-float img{
+    width: min(100%, 220px);
+  }
 }
 
 @media (max-width: 768px){
   .posters-row{
-    gap:1.2rem;
+    gap: 1rem;
   }
 
   .poster-float img{
-    width:min(100%, 240px);
+    width: min(100%, 200px);
   }
 
-  .poster-float:first-child img,
-  .poster-float--offset img{
-    transform:none;
-  }
-
-  .poster-float--offset{
-    animation-delay:.6s;
+  .poster-float:nth-child(1) img,
+  .poster-float:nth-child(2) img,
+  .poster-float:nth-child(3) img{
+    transform: none;
   }
 }
