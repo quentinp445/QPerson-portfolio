@@ -3,233 +3,180 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Quentin Person — Motion design, vidéo & 3D · Portfolio</title>
-  <meta name="description" content="Portfolio de Quentin Person : motion design, montage vidéo, 3D, graphisme et création de contenu. En recherche d'alternance — Master Directeur artistique Motion design, LISAA Paris.">
-  <meta name="theme-color" content="#0E0E11">
-  <meta property="og:title" content="Quentin Person — Motion design, vidéo & 3D">
-  <meta property="og:description" content="Portfolio 2026 · En recherche d'alternance à Paris.">
+  <title>Quentin Person — Motion design, vidéo, 3D</title>
+  <meta name="description" content="Quentin Person, motion designer et directeur artistique : motion design, vidéo, 3D, graphisme, UI/UX et création de contenu. Réalisations 2024 — 2026.">
+  <meta name="theme-color" content="#EBE7DF">
+  <meta property="og:title" content="Quentin Person — Motion design, vidéo, 3D">
+  <meta property="og:description" content="Réalisations 2024 — 2026 : motion design, vidéo, 3D, graphisme et numérique.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://quentinp445.github.io/QPerson-portfolio/">
   <meta property="og:image" content="https://quentinp445.github.io/QPerson-portfolio/assets/img/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23EF3E4A'/><text x='50%' y='57%' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black,Arial' font-weight='900' font-size='28' fill='white'>QP</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23151413'/><circle cx='47' cy='17' r='6' fill='%23E0452B'/><text x='10' y='50' font-family='Arial' font-weight='700' font-size='30' fill='%23EBE7DF'>QP</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-  <a class="skip" href="#projets">Aller aux projets</a>
+  <a class="skip" href="#realisations">Aller aux réalisations</a>
 
-  <!-- Intro -->
-  <div class="loader" aria-hidden="true"><div class="loader__name"><span>Quentin</span><span>Person</span></div><div class="loader__bar"><i></i></div></div>
+  <!-- Repères de grille (très discrets) -->
+  <div class="guides" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 
-  <!-- Barre de progression + curseur -->
-  <div class="progress" aria-hidden="true"><i></i></div>
-  <div class="cursor" aria-hidden="true"><span class="cursor__label">Voir</span></div>
-
-  <!-- Navigation -->
   <header class="nav" id="nav">
-    <a class="nav__logo" href="#top" aria-label="Accueil">QP<span>.</span></a>
+    <a class="nav__name" href="#top">Quentin Person</a>
     <nav class="nav__links" aria-label="Navigation principale">
-      <a href="#projets" data-link>Projets</a>
-      <a href="#videos" data-link>Vidéos</a>
-      <a href="#galerie" data-link>Galerie</a>
-      <a href="#apropos" data-link>À propos</a>
-      <a href="#parcours" data-link>Parcours</a>
+      <a href="#person" data-link><span>01</span>Person Quentin</a>
+      <a href="#realisations" data-link><span>02</span>Réalisations</a>
+      <a href="#contact" data-link><span>03</span>Contact</a>
     </nav>
-    <div class="nav__cta">
-      <a class="btn btn--ghost btn--sm" href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener">CV</a>
-      <a class="btn btn--sm" href="#contact">Me contacter</a>
-    </div>
-    <button class="nav__burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+    <p class="nav__time"><span>Paris</span> <time id="clock">--:--</time></p>
   </header>
-  <div class="menu" aria-hidden="true">
-    <a href="#projets">Projets</a><a href="#videos">Vidéos</a><a href="#galerie">Galerie</a><a href="#apropos">À propos</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a>
-  </div>
 
   <main id="top">
-    <!-- HERO -->
-    <section class="hero" aria-label="Présentation">
-      <div class="hero__wall" aria-hidden="true"><div class="wall" id="wall"></div></div>
-      <div class="hero__inner">
-        <p class="badge reveal-up"><span class="dot"></span>Disponible pour une alternance · Paris</p>
-        <h1 class="hero__title">
-          <span class="line"><span class="split">Quentin</span></span>
-          <span class="line"><span class="split accent">Person</span></span>
-        </h1>
-        <p class="hero__rotator reveal-up">Je crée du <span class="rot" id="rot">motion design</span></p>
-        <p class="hero__lead reveal-up">Motion design, vidéo, 3D, graphisme et création de contenu.<br>En <strong>Master Directeur artistique Motion design</strong> à LISAA Paris, je cherche une alternance.</p>
-        <div class="hero__actions reveal-up">
-          <a class="btn" href="#projets" data-cursor="Go">Voir mes projets</a>
-          <a class="btn btn--ghost" href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener">Télécharger mon CV</a>
+
+    <!-- ============ 01 PERSON QUENTIN ============ -->
+    <section class="hero paper" id="person" aria-label="Person Quentin">
+      <div class="hero__grid g">
+        <div class="hero__main">
+          <p class="hero__eyebrow fade"><span class="hero__tick"></span>Portfolio 2026</p>
+          <h1 class="hero__name">
+            <span class="hero__line"><span class="rv-line">Person</span></span>
+            <span class="hero__line"><span class="rv-line">Quentin<em class="dot" aria-hidden="true"></em></span></span>
+          </h1>
+          <p class="hero__role fade">Motion designer &amp; directeur artistique, basé à Paris.</p>
+          <div class="hero__cta fade">
+            <a class="btn btn--solid" href="#realisations">Voir les réalisations <span>↓</span></a>
+            <a class="btn btn--line" href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener">Télécharger le CV <span>↗</span></a>
+          </div>
         </div>
-      </div>
-      <a class="hero__scroll" href="#projets" aria-label="Défiler"><span>Scroll</span><i></i></a>
-    </section>
 
-    <!-- Bandeau défilant -->
-    <div class="marquee" aria-hidden="true"><div class="marquee__track" id="marquee"></div></div>
-
-    <!-- PROJETS A LA UNE -->
-    <section class="section" id="projets">
-      <div class="section__head">
-        <p class="eyebrow">01 — Projets à la une</p>
-        <h2 class="title reveal-up">Sélection<br><span class="accent">de projets</span></h2>
-        <p class="section__intro reveal-up">Des projets réels, en stage, en équipe ou en solo. Cliquez sur un projet pour voir la vidéo et le détail.</p>
-      </div>
-      <div class="featured" id="featured"></div>
-    </section>
-
-    <!-- CE QUE JE FAIS -->
-    <section class="section section--alt" id="services">
-      <div class="section__head">
-        <p class="eyebrow">02 — Ce que je fais</p>
-        <h2 class="title reveal-up">Un profil<br><span class="accent">multi&shy;disciplinaire</span></h2>
-      </div>
-      <div class="services">
-        <article class="service reveal-up"><span class="service__n">01</span><h3>Motion design</h3><p>Motions didactiques, flat design, typographie animée, animation de logo.</p></article>
-        <article class="service reveal-up"><span class="service__n">02</span><h3>Montage vidéo</h3><p>Podcast, interview, court métrage : rythme, habillage, VFX et sound design.</p></article>
-        <article class="service reveal-up"><span class="service__n">03</span><h3>3D</h3><p>Modélisation, texturing, éclairage et rendu sous Blender. 3D mapping.</p></article>
-        <article class="service reveal-up"><span class="service__n">04</span><h3>Réseaux sociaux &amp; shorts</h3><p>Formats verticaux TikTok, Reels et Shorts : accroche, sous-titres, rythme court.</p></article>
-        <article class="service reveal-up"><span class="service__n">05</span><h3>Graphisme &amp; DA</h3><p>Affiches, identité visuelle, design system, illustration.</p></article>
-        <article class="service reveal-up"><span class="service__n">06</span><h3>Digital &amp; UI</h3><p>Maquettes Figma, interfaces claires, intégration web.</p></article>
+        <aside class="hero__card fade" aria-label="En bref">
+          <div class="hc__row">
+            <p class="hc__label">Formation actuelle</p>
+            <p class="hc__title">Master Directeur artistique<br>Motion design</p>
+            <p class="hc__meta">LISAA Paris · 2026 — 2027</p>
+          </div>
+          <div class="hc__row">
+            <p class="hc__label">Domaines</p>
+            <ol class="hc__list">
+              <li>Motion</li><li>Vidéo</li><li>3D</li><li>Graphisme</li><li>Direction artistique</li><li>UI-UX</li><li>Web</li><li>Création de contenu</li><li>Communication digitale</li>
+            </ol>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <!-- TOUTES LES VIDEOS -->
-    <section class="section" id="videos">
-      <div class="section__head section__head--row">
-        <div>
-          <p class="eyebrow">03 — Tous les projets</p>
-          <h2 class="title reveal-up">Vidéos<br><span class="accent">&amp; créations</span></h2>
-        </div>
-        <div class="filters" role="tablist" aria-label="Filtrer les projets">
-          <button class="filter is-active" data-filter="all">Tout</button>
-          <button class="filter" data-filter="montage">Montage</button>
-          <button class="filter" data-filter="motion">Motion</button>
-          <button class="filter" data-filter="3d">3D</button>
-          <button class="filter" data-filter="contenu">Contenu</button>
-          <button class="filter" data-filter="design">Design</button>
+    <section class="profile paper" aria-label="Profil">
+      <div class="g block">
+        <p class="label c-1-4"><span class="mono">01.1</span>Profil</p>
+        <div class="c-5-12">
+          <p class="hello fade">Hello.</p>
+          <p class="lead fade">Diplômé du BUT MMI, j'entre en Master Directeur artistique Motion design à LISAA Paris. Mon travail tient dans cet aller-retour : monter un podcast, animer un motion, modéliser une scène en 3D, dessiner une affiche, décliner un contenu pour les réseaux.</p>
+          <p class="body fade">Je passe d'un outil à l'autre selon ce que le projet demande, en gardant la même exigence de rythme, de lisibilité et de cohérence visuelle. Le dessin et la culture pop nourrissent tout le reste.</p>
         </div>
       </div>
-      <div class="grid" id="grid"></div>
-    </section>
 
-    <!-- GALERIE -->
-    <section class="section section--alt" id="galerie">
-      <div class="section__head section__head--row">
-        <div>
-          <p class="eyebrow">04 — Galerie</p>
-          <h2 class="title reveal-up">3D, illustration<br><span class="accent">&amp; affiches</span></h2>
-        </div>
-        <div class="filters" role="tablist" aria-label="Filtrer la galerie">
-          <button class="gfilter is-active" data-g="3d">3D</button>
-          <button class="gfilter" data-g="illustration">Illustration</button>
-          <button class="gfilter" data-g="affiche">Affiches</button>
-        </div>
+      <div class="g block">
+        <p class="label c-1-4"><span class="mono">01.2</span>Compétences</p>
+        <div class="skills c-5-13" id="skills"></div>
       </div>
-      <div class="viewer3d reveal-up" id="viewer3d">
-        <div class="viewer3d__text">
-          <p class="eyebrow">Modèle interactif</p>
-          <h3>Faites tourner l'épée</h3>
-          <p>Modélisée sous Blender. Cliquez-glissez pour l'orienter.</p>
-        </div>
-        <div class="viewer3d__stage" id="mvStage"><span class="viewer3d__hint">Chargement du modèle…</span></div>
-      </div>
-      <div class="masonry" id="masonry"></div>
-    </section>
 
-    <!-- A PROPOS -->
-    <section class="section about" id="apropos">
-      <div class="about__visual">
-        <div class="about__shape" aria-hidden="true"></div>
-        <div class="about__frame"><img class="about__img parallax" src="assets/img/portrait.webp" alt="Portrait de Quentin Person" loading="lazy" width="1339" height="1800"></div>
-        <span class="about__tag">📍 Paris · Île-de-France</span>
+      <div class="g block">
+        <p class="label c-1-4"><span class="mono">01.3</span>Parcours</p>
+        <div class="c-5-13 timelines">
+          <div class="tl">
+            <p class="tl__label mono">Expériences</p>
+            <ol class="tl__row" id="tlExp"></ol>
+          </div>
+          <div class="tl">
+            <p class="tl__label mono">Formations</p>
+            <ol class="tl__row" id="tlEdu"></ol>
+          </div>
+        </div>
       </div>
-      <div class="about__text">
-        <p class="eyebrow">05 — À propos</p>
-        <h2 class="title reveal-up">Hello,<br>je suis <span class="accent">Quentin.</span></h2>
-        <p class="lead reveal-up">Diplômé du BUT MMI, j'entre en Master Directeur artistique Motion design à LISAA Paris. Je passe d'un outil à l'autre selon le besoin : monter un podcast, animer un motion, modéliser en 3D, concevoir une affiche ou décliner des contenus pour les réseaux sociaux.</p>
-        <p class="reveal-up">Curieux, créatif et rigoureux, j'aime les projets en équipe et les contenus qui ont un vrai usage. Le dessin et la culture pop nourrissent tout mon travail.</p>
-        <div class="stats reveal-up">
-          <div><b data-count="4">0</b><span>stages en entreprise</span></div>
-          <div><b data-count="10">0</b><span>vidéos en ligne</span></div>
-          <div><b data-count="10">0</b><span>logiciels maîtrisés</span></div>
-        </div>
-        <div class="about__cols reveal-up">
-          <div><h4>Logiciels</h4><ul class="tools" id="tools"></ul></div>
-          <div><h4>Langues</h4><ul class="langs"><li>Français <span>natif</span></li><li>Anglais <span>C1</span></li><li>Allemand <span>B1</span></li></ul></div>
-        </div>
+
+      <div class="g block facts">
+        <p class="label c-1-4"><span class="mono">01.4</span>En bref</p>
+        <dl class="c-5-13 facts__grid">
+          <div><dt class="mono">Diplôme</dt><dd>BUT MMI — Métiers du Multimédia et de l'Internet<br><span>IUT de Haguenau, 2026</span></dd></div>
+          <div><dt class="mono">En cours</dt><dd>Master Directeur artistique Motion design<br><span>LISAA Paris, 2026 — 2027</span></dd></div>
+          <div><dt class="mono">Langues</dt><dd id="langs"></dd></div>
+          <div><dt class="mono">Outils</dt><dd id="tools"></dd></div>
+          <div class="facts__cv"><dt class="mono">Documents</dt><dd>
+            <a class="link" href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener">Curriculum vitae <span>↗</span></a><br>
+            <a class="link" href="assets/docs/Portfolio_Quentin_PERSON_2026.pdf" target="_blank" rel="noopener">Portfolio PDF <span>↗</span></a></dd></div>
+        </dl>
       </div>
     </section>
 
-    <!-- PARCOURS -->
-    <section class="section section--alt" id="parcours">
-      <div class="section__head">
-        <p class="eyebrow">06 — Parcours</p>
-        <h2 class="title reveal-up">Expériences<br><span class="accent">&amp; formation</span></h2>
+    <!-- ============ 02 RÉALISATIONS ============ -->
+    <section class="works ink" id="realisations" aria-label="Réalisations">
+      <div class="g works__head">
+        <p class="mono c-1-4">02 — Réalisations</p>
+        <h2 class="works__title c-1-10">Réalisations<span class="sub">Motion, vidéo, 3D &amp; numérique</span></h2>
+        <p class="mono c-10-13 r works__count" id="worksCount"></p>
       </div>
-      <div class="timeline">
-        <div class="timeline__col"><h3 class="timeline__h">Expériences</h3><ol class="tl" id="tlExp"></ol></div>
-        <div class="timeline__col"><h3 class="timeline__h">Formation</h3><ol class="tl" id="tlEdu"></ol></div>
+      <div class="works__grid g" id="works"></div>
+
+      <div class="g archive">
+        <div class="c-1-4">
+          <p class="label"><span class="mono">02.2</span>Images &amp; print</p>
+          <p class="body small">Illustration, affiches et rendus 3D. Cliquer pour agrandir.</p>
+        </div>
+        <div class="c-5-13" id="archive"></div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <p class="eyebrow">07 — Contact</p>
-      <h2 class="contact__title"><span class="line"><span class="split">Travaillons</span></span><span class="line"><span class="split accent">ensemble.</span></span></h2>
-      <p class="contact__lead reveal-up">Je cherche une alternance en motion design, vidéo, 3D ou création de contenu, à Paris et en Île-de-France. Disponible dès maintenant.</p>
-      <div class="contact__mail reveal-up">
-        <a href="mailto:personquentin700@gmail.com" class="mail" data-cursor="Écrire">personquentin700@gmail.com</a>
-        <button class="copy" data-copy="personquentin700@gmail.com">Copier</button>
+    <!-- ============ 03 CONTACT ============ -->
+    <section class="contact paper" id="contact" aria-label="Contact">
+      <div class="g">
+        <p class="mono c-1-4">03 — Contact</p>
+        <p class="contact__kicker c-5-13 fade">Un projet, une question, une collaboration&nbsp;?</p>
       </div>
-      <div class="contact__links reveal-up">
-        <a href="tel:+33651284806"><span>Téléphone</span>06 51 28 48 06</a>
-        <a href="https://www.linkedin.com/in/quentin-person/" target="_blank" rel="noopener"><span>LinkedIn</span>quentin-person ↗</a>
-        <a href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener"><span>CV</span>Télécharger ↓</a>
-        <a href="assets/docs/Portfolio_Quentin_PERSON_2026.pdf" target="_blank" rel="noopener"><span>Portfolio PDF</span>Télécharger ↓</a>
+      <div class="g">
+        <a class="contact__mail c-1-13" href="mailto:personquentin700@gmail.com"><span class="rv-line">personquentin700@<wbr>gmail.com</span></a>
       </div>
+      <div class="g contact__list">
+        <div class="c-1-4"><p class="mono">Téléphone</p><a class="link" href="tel:+33651284806">06 51 28 48 06</a></div>
+        <div class="c-4-7"><p class="mono">LinkedIn</p><a class="link" href="https://www.linkedin.com/in/quentin-person/" target="_blank" rel="noopener">quentin-person <span>↗</span></a></div>
+        <div class="c-7-10"><p class="mono">Documents</p><a class="link" href="assets/docs/CV_Quentin_PERSON.pdf" target="_blank" rel="noopener">CV <span>↗</span></a> &nbsp; <a class="link" href="assets/docs/Portfolio_Quentin_PERSON_2026.pdf" target="_blank" rel="noopener">Portfolio <span>↗</span></a></div>
+        <div class="c-10-13"><p class="mono">Basé à</p><p>Paris, Île-de-France</p></div>
+      </div>
+      <footer class="footer g">
+        <p class="mono c-1-7">© 2026 Quentin Person — Motion, vidéo, 3D, graphisme</p>
+        <p class="mono c-7-13 r"><a href="#top" class="link">Haut de page <span>↑</span></a></p>
+      </footer>
     </section>
   </main>
 
-  <footer class="footer">
-    <span>© 2026 Quentin Person</span>
-    <span>Motion design · Vidéo · 3D · Graphisme</span>
-    <a href="#top">Retour en haut ↑</a>
-  </footer>
-
-  <!-- Fenêtre projet -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-    <div class="modal__backdrop" data-close></div>
-    <div class="modal__panel">
-      <button class="modal__close" data-close aria-label="Fermer">✕</button>
-      <div class="modal__media" id="modalMedia"></div>
-      <div class="modal__body">
-        <p class="eyebrow" id="modalKicker"></p>
-        <h3 class="modal__title" id="modalTitle"></h3>
-        <p class="modal__summary" id="modalSummary"></p>
-        <p class="modal__desc" id="modalDesc"></p>
-        <div class="modal__meta" id="modalMeta"></div>
-        <div class="modal__nav"><button class="btn btn--ghost btn--sm" id="modalPrev">← Précédent</button><button class="btn btn--ghost btn--sm" id="modalNext">Suivant →</button></div>
+  <!-- Fiche réalisation -->
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sTitle" hidden>
+    <div class="sheet__bar mono">
+      <span id="sIndex"></span>
+      <div><button id="sPrev">Précédent</button><button id="sNext">Suivant</button><button id="sClose" class="close">Fermer ✕</button></div>
+    </div>
+    <div class="sheet__body g">
+      <div class="sheet__media c-1-9" id="sMedia"></div>
+      <div class="sheet__text c-9-13">
+        <p class="mono" id="sType"></p>
+        <h3 id="sTitle"></h3>
+        <p class="lead" id="sSummary"></p>
+        <p class="body" id="sDesc"></p>
+        <dl class="sheet__meta" id="sMeta"></dl>
       </div>
     </div>
   </div>
 
-  <!-- Visionneuse images -->
-  <div class="lightbox" id="lightbox" hidden>
-    <button class="lightbox__close" data-lclose aria-label="Fermer">✕</button>
-    <button class="lightbox__prev" aria-label="Image précédente">←</button>
-    <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
-    <button class="lightbox__next" aria-label="Image suivante">→</button>
+  <!-- Visionneuse -->
+  <div class="viewer" id="viewer" hidden>
+    <div class="sheet__bar mono"><span id="vCap"></span><div><button id="vPrev">Précédente</button><button id="vNext">Suivante</button><button id="vClose" class="close">Fermer ✕</button></div></div>
+    <img id="vImg" alt="">
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
-  <script src="assets/js/content.js" defer></script>
-  <script src="assets/js/main.js" defer></script>
+  <script src="content.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
